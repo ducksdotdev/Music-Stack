@@ -1,6 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700');
+$primary: #D1603D;
+$black: #383838;
+$white: rgba(255, 255, 255, .8);
+
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+}
+* { box-sizing: border-box; }
+wrapper { padding: 15px 50px; display: block;
+  width: 90%;
+  max-width: calc(100% - 250px);
+  float: right;
+}
+body { background: $black; font-family: "Lato", sans-serif; }
+h1, h2 { color: $primary; font-family: "Roboto Slab", serif; letter-spacing: 2px; font-weight: 700; }
+h3 { color: $white; }
+nav {
+  background: rgba(0, 0, 0, .2);
+  width: 10%;
+  min-width: 250px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  span.title {
+    color: $primary;
+    padding: 15px;
+    font-weight: 700;
+    background: rgba(0, 0, 0, .2);
+  }
+  a { color: $white;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+    transition-duration: 150ms;
+    font-weight: 700;
+    &:hover {
+      background: $black;
+      color: $primary;
+      box-shadow: none;
+      border-color: rgba(0, 0, 0, 0.25); }
+  }
 }
