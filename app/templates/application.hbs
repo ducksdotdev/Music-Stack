@@ -2,11 +2,12 @@
   <span class="title">Browse</span>
   <a href="#">Discover</a>
   <a href="#">Friends</a>
-  <span class="title">Your Library</span>
+  <span class="title">Your Music</span>
+  {{#link-to 'library'}}Library{{/link-to}}
   <a href="#">Playlists +</a>
   <a href="#">Artists</a>
   <a href="#">Albums</a>
-  <a href="#">Songs</a>
+  {{#link-to 'songs'}}Songs{{/link-to}}
 </nav>
 <wrapper>{{outlet}}</wrapper>
 {{music-player}}

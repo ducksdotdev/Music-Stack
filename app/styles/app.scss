@@ -32,10 +32,11 @@ nav {
   justify-content: flex-start;
   flex-direction: column;
   span.title {
-    color: $primary;
-    padding: 15px;
+    color: rgba(255, 255, 255, .5);
+    padding: 10px 15px;
     font-weight: 700;
     background: rgba(0, 0, 0, .2);
+    font-size: .75rem;
   }
   a { color: $white;
     padding: 15px;
@@ -44,7 +45,7 @@ nav {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
     transition-duration: 150ms;
     font-weight: 700;
-    &:hover {
+    &:hover, &.active {
       background: $black;
       color: $primary;
       box-shadow: none;
