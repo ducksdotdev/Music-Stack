@@ -5,3 +5,11 @@
   </div>
   <span class="media-length">{{seconds-to-readable length}}</span>
 </div>
+<div class="actions">
+  <button class="button"><i class="fa fa-3x fa-backward"></i></button>
+  <button class="button pauseplay" {{action 'pausePlay'}}>
+    <i class="fa fa-3x fa-pause"></i>
+    <i class="fa fa-3x fa-play"></i>
+  </button>
+  <button class="button"><i class="fa fa-3x fa-forward"></i></button>
+</div>
