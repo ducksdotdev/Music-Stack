@@ -1,5 +1,7 @@
 <div class="time-indicator">
-  <span class="position">{{position}}</span>
-  <div class="progress-bar" onclick={{action 'pickTime'}}><div class="progress"></div></div>
-  <span class="media-length">{{length}}</span>
+  <span class="position">{{seconds-to-readable progress}}</span>
+  <div class="progress-bar" onclick={{action 'pickTime'}}>
+    <div class="progress"></div>
+  </div>
+  <span class="media-length">{{seconds-to-readable length}}</span>
 </div>
