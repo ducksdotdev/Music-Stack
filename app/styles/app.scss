@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700');
-$primary: #D1603D;
-$black: #212121;
+$primary: rgba(209, 96, 61, 1);
 $white: rgba(255, 255, 255, .8);
+$black: #212121;
 
 $music_player_height: 150px;
 $nav_width: 250px;
@@ -59,4 +59,31 @@ nav {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, .45);
   position: fixed;
   bottom: 0;
+  display: flex;
+  align-items: center;
+  .time-indicator {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    font-size: .75rem;
+    .progress-bar {
+      height: 5px;
+      background: transparentize($primary, 0.8);
+      border-radius: 8px;
+      min-width: 250px;
+      width: 100%;
+      margin: 0 15px;
+      position: relative;
+      overflow: hidden;
+      &:hover { cursor: pointer; }
+      .progress {
+        transition-duration: 300ms;
+        background: $primary;
+        height: 100%;
+        position: absolute; }
+    }
+  }
 }
