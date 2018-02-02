@@ -14,7 +14,7 @@ export default Component.extend({
     if (!__self.get('interval')) {
       __self.set('interval', setInterval(function () {
         let progress = __self.get('progress');
-        if (progress >= __self.get('length')) clearInterval(__self.get('interval'));
+        if (progress >= __self.get('length')) __self.goNext();
         __self.set('progress', progress + .25);
       }, 250));
     }
