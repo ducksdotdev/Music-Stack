@@ -3,7 +3,20 @@ import Component from '@ember/component';
 export default Component.extend({
   classNames: ['music-player'],
   length: 196,
-  progress: 92,
+  progress: 0,
+  interval: null,
+  init() {
+    let __self = this;
+    __self._super(...arguments);
+    __self.set('interval', setInterval(function () {
+      let progress = __self.get('progress');
+      if (progress >= __self.get('length')) clearInterval(__self.get('interval'));
+      __self.set('progress', progress + .25);
+    }, 250));
+  },
+  willDestroyElement() {
+    clearInterval(this.get('interval'));
+  },
   actions: {
     pickTime(e) {
       const $target = $(".progress-bar"),
