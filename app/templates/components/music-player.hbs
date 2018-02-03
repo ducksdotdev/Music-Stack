@@ -8,8 +8,11 @@
 <div class="actions">
   <button class="button" title="Previous Song" {{action 'goPrevious'}}><i class="fa fa-3x fa-backward"></i></button>
   <button class="button pauseplay" title="Pause/Play" {{action 'pausePlay'}}>
-    <i class="fa fa-3x fa-pause"></i>
-    <i class="fa fa-3x fa-play"></i>
+    {{#if paused}}
+      <i class="fa fa-3x fa-play"></i>
+    {{else}}
+      <i class="fa fa-3x fa-pause"></i>
+    {{/if}}
   </button>
   <button class="button" title="Next Song" {{action 'goNext'}}><i class="fa fa-3x fa-forward"></i></button>
 </div>

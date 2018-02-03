@@ -5,7 +5,7 @@ export default Component.extend({
   length: Math.random() * (359 - 140) + 140,
   progress: 0,
   interval: null,
-  paused: false,
+  paused: true,
   willDestroyElement() {
     clearInterval(this.get('interval'));
   },
@@ -14,23 +14,16 @@ export default Component.extend({
     if (!__self.get('interval')) {
       __self.set('interval', setInterval(function () {
         let progress = __self.get('progress');
-        if (progress >= __self.get('length')) __self.goNext();
-        __self.set('progress', progress + .25);
+        if (progress >= __self.get('length')) __self.send('goNext');
+        else __self.set('progress', progress + .25);
       }, 250));
     }
   },
   togglePausePlay: function () {
-    const $target = $('.button.pauseplay'),
-      $pause = $target.find(".fa-pause"),
-      $play = $target.find(".fa-play");
     if (this.get("paused")) {
-      $pause.hide();
-      $play.show();
       clearInterval(this.get('interval'));
       this.set('interval', null);
     } else {
-      $pause.show();
-      $play.hide();
       this.startProgress();
     }
   }.observes('paused').on('didRender'),
