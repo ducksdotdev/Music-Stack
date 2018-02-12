@@ -6,6 +6,7 @@ export default Component.extend({
   progress: 0,
   interval: null,
   paused: true,
+  width: 0,
   willDestroyElement() {
     clearInterval(this.get('interval'));
   },
@@ -29,12 +30,11 @@ export default Component.extend({
   }.observes('paused').on('didRender'),
   setProgress: function () {
     const width = this.get('progress') / this.get('length') * 100;
-    $('.progress-bar .progress').css('width', width + "%");
+    this.set('width', width);
   }.observes('progress').on('didRender'),
   actions: {
     pickTime(e) {
-      const $target = $(".progress-bar"),
-        width = $target.width(),
+      const width = $(".progress-bar").width(),
         position = e.offsetX,
         percentThrough = position / width * 100;
       this.set('progress', this.get('length') * percentThrough / 100);
@@ -50,4 +50,7 @@ export default Component.extend({
       this.set('progress', 0);
     }
   },
+  widthString: function() {
+    return Ember.String.htmlSafe("width: " + this.get('width') + "%");
+  }.property('width')
 });
