@@ -106,7 +106,9 @@ nav {
   }
 }
 /** LOGIN AND REGISTER STYLES **/
-// Login/register styles goes here (task 1)
+.login-register-page {
+  // Login/register styles goes here (task 1)
+}
 /** END LOGIN AND REGISTER STYLES **/
 
 /** SONG LIST STYLES **/
@@ -118,11 +120,17 @@ nav {
 /** ALBUM COVER STYLES **/
 .album-cover {
   // Album cover styles goes here (task 3)
-  background: black;
+  background: green;
   height: $music_player_height;
   width: $nav_width;
   position: absolute;
   left: 0;
+  span { color: white; }
+  span.artist {
+    color: red;
+  }
+
+  span { display: block; }
 }
 /** END ALBUM COVER STYLES **/
 
