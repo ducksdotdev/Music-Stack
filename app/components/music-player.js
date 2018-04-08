@@ -1,6 +1,7 @@
 import Component from '@ember/component';
 
 export default Component.extend({
+  session: Ember.inject.service('session'),
   classNames: ['music-player'],
   length: Math.random() * (359 - 140) + 140,
   progress: 0,

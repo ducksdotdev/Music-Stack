@@ -7,8 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function () {
-  this.route('songs');
-  this.route('library');
+  this.route('songs', function() {
+    this.route('all');
+  });
+  this.route('login');
+  this.route('register');
 });
 
 export default Router;
