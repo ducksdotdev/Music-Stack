@@ -108,6 +108,67 @@ nav {
 /** LOGIN AND REGISTER STYLES **/
 .login-register-page {
   // Login/register styles goes here (task 1)
+  width: 350px;
+  padding: 20px 20px;
+  margin: 0 auto;
+  margin-top: 10%;
+  background-color: $white;
+  
+  input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  h2{
+    text-align: center;
+  }
+  
+  .submit-btn-container{
+    text-align: center;
+  }
+  
+  button{
+    padding: 10px 10px;
+    margin: 3px 3px;
+    width: 200px;
+  }
+  
+  .facebook{
+    background-color: #3b5998;
+    color: white;
+  }
+  
+  .spotify{
+    background-color: #1db954;
+    color: white;
+  }
+  
+  .sign-up{
+    color: $primary;
+    text-decoration: none;
+  }
+  
+  .fa-facebook-f, .fa-spotify{
+    margin-right: 10px !important;
+  }
+  
+  .submit{
+     background-color: grey;
+     color: white;
+     text-decoration: none;
+  }
+  
+  .create-account, .register{
+     background-color: grey;
+     color: white;
+     text-decoration: none;
+  }
+  
+  
 }
 /** END LOGIN AND REGISTER STYLES **/
 
