@@ -197,6 +197,42 @@ nav {
 
 /** MY ACCOUNT STYLES **/
 .my-account {
-  color: orange;
+  .spotify{
+    background-color: #1db954;
+    color: white;
+  }
+  .youtube{
+    background-color: #ff0000;
+	color: white;
+  }
+  .fa.youtube .fa-spotify{
+    margin-right: 10px !important;
+  }
+  .submitButton{
+    text-align: center;
+  }
+  .submit{
+     background-color: grey;
+     color: white;
+     text-decoration: none;
+  }
+  h3{
+    text-align: center;
+  }
+  input{
+    width: 100%;
+    padding: 8px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: px solid #ccc;
+    box-sizing: border-box;
+	align: center;
+  }
+  button{
+    padding: 10px 10px;
+    margin: 3px 3px;
+    width: 200px;
+	border: none;
+  }
 }
 /** END MY ACCOUNT STYLES **/
