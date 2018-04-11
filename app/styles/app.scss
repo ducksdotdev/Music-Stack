@@ -212,10 +212,10 @@ nav {
 .song-list {
   color: $white;
   table { width: 100%; }
-  th, td { padding: 8px 15px; }
-  tbody tr { background: rgba(0, 0, 0, .3); cursor: pointer;
-    &:nth-child(2n) { background: rgba(0, 0, 0, .5); }
-    &:hover { background: $black; }
+  th, td { padding: 8px 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  tbody tr { background: rgba(0, 0, 0, .2); cursor: pointer;
+    &:nth-child(2n) { background: rgba(0, 0, 0, .1); }
+    &:hover { background: transparent; }
   }
   th {
     font-weight: bold;
@@ -278,7 +278,7 @@ nav {
     padding: 8px 16px;
     margin: 8px 0;
     display: inline-block;
-    border: px solid #ccc;
+    border: 1px solid #ccc;
     box-sizing: border-box;
 	align: center;
   }
