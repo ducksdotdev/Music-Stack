@@ -223,6 +223,7 @@ nav {
     border-bottom: 1px solid $white;
     text-transform: lowercase;
   }
+  td { text-transform: capitalize; }
 }
 
 /** END SONG LIST STYLES **/
