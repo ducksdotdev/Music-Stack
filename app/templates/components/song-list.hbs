@@ -1,1 +1,22 @@
-{{#each songs as |song|}}<h2>{{song.title}}</h2>{{/each}}
+<table cellspacing="0" cellpadding="0">
+  <thead>
+  <tr>
+    <th width="40%">Title</th>
+    <th width="25%">Artist</th>
+    <th width="15%">Album</th>
+    <th width="10%">Duration</th>
+    <th width="10%">Service</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each songs as |song|}}
+    <tr>
+      <td>{{song.title}}</td>
+      <td>{{song.artist}}</td>
+      <td>{{song.album}}</td>
+      <td>{{seconds-to-readable song.duration}}</td>
+      <td>{{song.service}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
