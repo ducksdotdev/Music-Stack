@@ -1,4 +1,9 @@
-{{album-cover}}
+{{#if playing.song.duration}}
+  <div class="song-info">
+    <span class="title">{{playing.song.title}}</span>
+    <span class="album">{{playing.song.artist}} | {{playing.song.album}}</span>
+  </div>
+{{/if}}
 <div class="time-indicator">
   <span class="position">{{seconds-to-readable playing.progress}}</span>
   <div class="progress-bar" onclick={{action 'pickTime'}}>

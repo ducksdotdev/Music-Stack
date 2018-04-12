@@ -139,6 +139,15 @@ nav {
       }
     }
   }
+  .song-info {
+    color: $white;
+    text-align: center;
+    font-size: .825rem;
+    opacity: .5;
+    padding: 10px;
+    span { display: block; }
+    .title { text-transform: capitalize;}
+  }
 }
 
 /** LOGIN AND REGISTER STYLES **/
@@ -229,66 +238,44 @@ nav {
 
 /** END SONG LIST STYLES **/
 
-/** ALBUM COVER STYLES **/
-.album-cover {
-  // Album cover styles goes here (task 3)
-  background: green;
-  height: $music_player_height;
-  width: $nav_width;
-  position: absolute;
-  left: 0;
-  span {
-    color: white;
-  }
-  span.artist {
-    color: red;
-  }
-
-  span {
-    display: block;
-  }
-}
-
-/** END ALBUM COVER STYLES **/
-
 /** MY ACCOUNT STYLES **/
 .my-account {
-  .spotify{
+  .spotify {
     background-color: #1db954;
     color: white;
   }
-  .youtube{
+  .youtube {
     background-color: #ff0000;
-	color: white;
+    color: white;
   }
-  .fa.youtube .fa-spotify{
+  .fa.youtube .fa-spotify {
     margin-right: 10px !important;
   }
-  .submitButton{
+  .submitButton {
     text-align: center;
   }
-  .submit{
-     background-color: grey;
-     color: white;
-     text-decoration: none;
+  .submit {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
   }
-  h3{
+  h3 {
     text-align: center;
   }
-  input{
+  input {
     width: 100%;
     padding: 8px 16px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-	align: center;
+    align: center;
   }
-  button{
+  button {
     padding: 10px 10px;
     margin: 3px 3px;
     width: 200px;
-	border: none;
+    border: none;
   }
 }
 
