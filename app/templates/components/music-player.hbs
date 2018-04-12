@@ -1,15 +1,15 @@
 {{album-cover}}
 <div class="time-indicator">
-  <span class="position">{{seconds-to-readable progress}}</span>
+  <span class="position">{{seconds-to-readable playing.progress}}</span>
   <div class="progress-bar" onclick={{action 'pickTime'}}>
-    <div class="progress" style={{widthString}}></div>
+    <div class="progress" style={{width}}></div>
   </div>
-  <span class="media-length">{{seconds-to-readable length}}</span>
+  <span class="media-length">{{seconds-to-readable playing.song.duration}}</span>
 </div>
 <div class="actions">
   <button class="button" title="Previous Song" {{action 'goPrevious'}}><i class="fa fa-3x fa-backward"></i></button>
   <button class="button pauseplay" title="Pause/Play" {{action 'pausePlay'}}>
-    {{#if paused}}
+    {{#if playing.paused}}
       <i class="fa fa-3x fa-play"></i>
     {{else}}
       <i class="fa fa-3x fa-pause"></i>

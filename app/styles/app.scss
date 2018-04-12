@@ -211,9 +211,10 @@ nav {
 /** SONG LIST STYLES **/
 .song-list {
   color: $white;
+  .song-item { display: table-row }
   table { width: 100%; }
   th, td { padding: 8px 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  tbody tr { background: rgba(0, 0, 0, .2); cursor: pointer;
+  tbody .song-item { background: rgba(0, 0, 0, .2); cursor: pointer;
     &:nth-child(2n) { background: rgba(0, 0, 0, .1); }
     &:hover { background: transparent; }
   }

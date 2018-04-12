@@ -10,13 +10,7 @@
   </thead>
   <tbody>
   {{#each songs as |song|}}
-    <tr>
-      <td>{{song.title}}</td>
-      <td>{{song.artist}}</td>
-      <td>{{song.album}}</td>
-      <td>{{seconds-to-readable song.duration}}</td>
-      <td>{{song.service}}</td>
-    </tr>
+    {{song-item song=song}}
   {{/each}}
   </tbody>
 </table>
