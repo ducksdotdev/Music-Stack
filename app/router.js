@@ -9,6 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function () {
   this.route('songs', function() {
     this.route('all');
+    this.route('library');
   });
   this.route('register');
   this.route('my-account');
