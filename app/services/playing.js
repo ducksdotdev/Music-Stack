@@ -12,10 +12,10 @@ export default Service.extend({
     });
   },
   setSong(song) {
-    const isFirstSong = !this.get('song');
+    const isFirstSong = this.get('song.duration') === 0;
     this.set('song', song);
     this.set('progress', 0);
-    if(isFirstSong) this.pausePlay();
+    if (isFirstSong) this.pausePlay();
   },
   startProgress() {
     const __self = this;
