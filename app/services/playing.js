@@ -8,7 +8,10 @@ export default Service.extend({
   init() {
     this._super(...arguments);
     this.set('song', {
-      duration: 0
+      duration: 0,
+      title: "Title",
+      artist: 'Artist',
+      album: 'Album'
     });
   },
   setSong(song) {

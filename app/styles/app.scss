@@ -233,7 +233,9 @@ nav {
     border-bottom: 1px solid $white;
     text-transform: lowercase;
   }
-  td { text-transform: capitalize; }
+  td { text-transform: capitalize;
+    &.active { background: transparentize($primary, .85); }
+  }
 }
 
 /** END SONG LIST STYLES **/
