@@ -155,8 +155,8 @@ nav {
   // Login/register styles goes here (task 1)
   width: 350px;
   padding: 20px 20px;
-  margin: 0 auto;
-  margin-top: 10%;
+  margin: 10% auto 0;
+  text-align: center;
   background-color: $white;
 
   input {
@@ -168,27 +168,21 @@ nav {
     box-sizing: border-box;
   }
 
-  h2 {
-    text-align: center;
-  }
-
-  .submit-btn-container {
-    text-align: center;
-  }
+  h3 { color: $black; }
 
   button {
     padding: 10px 10px;
     margin: 3px 3px;
     width: 200px;
+    border: none;
   }
 
   .sign-up {
+    display: block;
     color: $primary;
     text-decoration: none;
-  }
-
-  .fa-facebook-f, .fa-spotify {
-    margin-right: 10px !important;
+    padding: 10px 0;
+    &:hover { text-decoration: underline; }
   }
 
   .submit {
@@ -202,7 +196,6 @@ nav {
     color: white;
     text-decoration: none;
   }
-
 }
 
 /** END LOGIN AND REGISTER STYLES **/
