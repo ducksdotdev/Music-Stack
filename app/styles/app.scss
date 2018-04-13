@@ -225,19 +225,11 @@ nav {
 
 /** MY ACCOUNT STYLES **/
 .my-account {
-  .fa.youtube .fa-spotify {
-    margin-right: 10px !important;
-  }
-  .submitButton {
-    text-align: center;
-  }
+  text-align: center;
   .submit {
     background-color: grey;
     color: white;
     text-decoration: none;
-  }
-  h3 {
-    text-align: center;
   }
   input {
     width: 100%;
@@ -265,3 +257,5 @@ nav {
   background-color: #ff0000;
   color: white;
 }
+
+label { color: $white; }
