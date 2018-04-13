@@ -20,7 +20,6 @@ export default Route.extend({
       {"artist":"Gris McDarmid","album":"phasellus id","service":"Spotify","title":"ipsum","duration":185},
       {"artist":"Jose Geldart","album":"at","service":"Spotify","title":"potenti","duration":234},
       {"artist":"Jacobo Veregan","album":"quam","service":"Spotify","title":"nullam varius","duration":486},
-      {"artist":"Elvira Varney","album":"at","service":"Spotify","title":"sapien cum","duration":191},
       {"artist":"Merilyn Alfonsetto","album":"tellus semper","service":"Youtube","title":"lobortis sapien sapien non","duration":331},
       {"artist":"Cherianne Blaszczynski","album":"magna at","service":"Spotify","title":"eu orci","duration":200},
       {"artist":"Marylee Klausen","album":"nibh in","service":"Spotify","title":"convallis nunc proin","duration":439},

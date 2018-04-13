@@ -1,25 +1,19 @@
- <div class="login-register-page">
- <center>
+<div class="login-register-page">
+  <center>
     <h2>Music-Stack</h2>
-    
     <input type="text" placeholder="Enter Username" name="uname" required>
-
     <input type="password" placeholder="Enter Password" name="psw" required>
-	</center>
-	
-    
-    <div class = "submit-btn-container">
-        <button class = "submit" type="submit">{{#link-to 'songs' class='submit'}}Login{{/link-to}}</button>
-        <br>
-        <button class = "spotify" type="submit"><i class="fab fa-spotify"></i>Login in with Spotify</button>
-        <br>
-        <button class = "facebook" type="submit"><i class="fab fa-facebook-f"></i>Login in with Facebook</button>
-        <br>
-        <p>Dont have an account?</p>
-        {{#link-to 'register' class='sign-up'}}Sign up{{/link-to}}
-    </div>
-    
-    
+  </center>
+  <div class="submit-btn-container">
+    <button class="submit" type="submit">{{#link-to 'songs' class='submit'}}Login{{/link-to}}</button>
+    <br>
+    <button class="spotify" type="submit"><i class="fab fa-spotify"></i>Login in with Spotify</button>
+    <br>
+    <button class="youtube" type="Submit"><i class="fab fa-youtube"></i>
+      Link Youtube account
+    </button>
+    <br>
+    <p>Don't have an account?</p>
+    {{#link-to 'register' class='sign-up'}}Sign up{{/link-to}}
   </div>
-
-{{outlet}}
+</div>
