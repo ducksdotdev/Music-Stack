@@ -146,7 +146,6 @@ nav {
     opacity: .5;
     padding: 10px;
     span { display: block; }
-    .title { text-transform: capitalize;}
   }
 }
 
@@ -184,13 +183,6 @@ nav {
     padding: 10px 0;
     &:hover { text-decoration: underline; }
   }
-
-  .submit {
-    background-color: grey;
-    color: white;
-    text-decoration: none;
-  }
-
   .create-account, .register {
     background-color: grey;
     color: white;
@@ -216,9 +208,7 @@ nav {
     border-bottom: 1px solid $white;
     text-transform: lowercase;
   }
-  td { text-transform: capitalize;
-    &.active { background: transparentize($primary, .85); }
-  }
+  td.active { background: transparentize($primary, .85); }
 }
 
 /** END SONG LIST STYLES **/
@@ -226,11 +216,8 @@ nav {
 /** MY ACCOUNT STYLES **/
 .my-account {
   text-align: center;
-  .submit {
-    background-color: grey;
-    color: white;
-    text-decoration: none;
-  }
+  width: 50%;
+  margin: 0 auto;
   input {
     width: 100%;
     padding: 8px 16px;
@@ -253,9 +240,18 @@ nav {
   background-color: #1db954;
   color: white;
 }
+
 .youtube {
   background-color: #ff0000;
   color: white;
+}
+
+.submit {
+  background-color: grey;
+  padding: 10px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
 }
 
 label { color: $white; }

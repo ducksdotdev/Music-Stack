@@ -1,6 +1,10 @@
 <div class="song-info">
-  <span class="title">{{playing.song.title}}</span>
+  {{#if playing.song.title}}
+    <span class="title">{{playing.song.title}}</span>
     <span class="album">{{playing.song.artist}} | {{playing.song.album}}</span>
+  {{else}}
+    <span class="title">Select a song to start listening!</span>
+  {{/if}}
 </div>
 <div class="time-indicator">
   <span class="position">{{seconds-to-readable playing.progress}}</span>

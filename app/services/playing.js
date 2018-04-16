@@ -8,12 +8,7 @@ export default Service.extend({
   audioObj: null,
   init() {
     this._super(...arguments);
-    this.set('song', {
-      duration: 0,
-      title: "Title",
-      artist: 'Artist',
-      album: 'Album'
-    });
+    this.set('song', {duration: 0});
   },
   setSong(song) {
     this.set('song', song);
