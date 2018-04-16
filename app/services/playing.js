@@ -16,11 +16,12 @@ export default Service.extend({
     });
   },
   setSong(song) {
-    const isFirstSong = this.get('song.duration') === 0;
     this.set('song', song);
     this.set('progress', 0);
+    this.set('interval', null);
+    this.set('paused', true);
     this.set('audioObj', new Audio(this.get('song.preview')));
-    if (isFirstSong) this.pausePlay();
+    this.pausePlay();
   },
   startProgress() {
     const __self = this;
