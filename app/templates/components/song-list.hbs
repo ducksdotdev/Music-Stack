@@ -1,15 +1,15 @@
 <table cellspacing="0" cellpadding="0">
   <thead>
   <tr>
-    <th width="40%">Title</th>
-    <th width="25%">Artist</th>
-    <th width="15%">Album</th>
+    <th width="40%" {{action 'sort' 'title'}}>{{#if (eq sortBy 'title')}}{{if sortDir '▼' '▲'}} {{/if}}Title</th>
+    <th width="25%" {{action 'sort' 'artist'}}>{{#if (eq sortBy 'artist')}}{{if sortDir '▼' '▲'}} {{/if}}Artist</th>
+    <th width="15%" {{action 'sort' 'album'}}>{{#if (eq sortBy 'album')}}{{if sortDir '▼' '▲'}} {{/if}}Album</th>
     <th width="10%">Duration</th>
-    <th width="10%">Service</th>
+    <th width="10%" {{action 'sort' 'service'}}>{{#if (eq sortBy 'service')}}{{if sortDir '▼' '▲'}} {{/if}}Service</th>
   </tr>
   </thead>
   <tbody>
-  {{#each songs as |song index|}}
+  {{#each sortedSongs as |song index|}}
     {{song-item song=song playlist=songs index=index}}
   {{/each}}
   </tbody>

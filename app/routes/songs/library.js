@@ -704,16 +704,6 @@ export default Route.extend({
         "service": "YouTube"
       },
       {
-        "artist": "",
-        "album": "Singles",
-        // "duration": 178,
-        "duration": 30,
-        "explicit": "FALSE",
-        "title": "Fall In Love",
-        "preview": "",
-        "service": "YouTube"
-      },
-      {
         "artist": "The Bug",
         "album": "Angels & Devils",
         // "duration": 298,
