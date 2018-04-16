@@ -5,7 +5,6 @@ import {htmlSafe} from '@ember/string';
 import $ from 'jquery';
 
 export default Component.extend({
-  // session: Ember.inject.service('session'),
   playing: service(),
   classNames: ['music-player'],
   actions: {
@@ -25,7 +24,7 @@ export default Component.extend({
       this.get('playing').pickTime(percentThrough);
     }
   },
-  width: computed('playing.{progress,song.duration}', () => {
+  width: computed('playing.{progress,song.duration}', function () {
     let width = 0;
     let duration = this.get('playing.song.duration');
     if (duration > 0)
