@@ -9,8 +9,8 @@
   </tr>
   </thead>
   <tbody>
-  {{#each songs as |song|}}
-    {{song-item song=song}}
+  {{#each songs as |song index|}}
+    {{song-item song=song playlist=songs index=index}}
   {{/each}}
   </tbody>
 </table>

@@ -4,12 +4,14 @@ import {computed} from '@ember/object';
 
 export default Component.extend({
   classNames: ['song-item'],
-  positionalParams: 'song',
+  positionalParams: ['playlist', 'index'],
   playing: service(),
   isActive: computed('playing.song.title', 'song.title', function () {
     return this.get('playing.song.title') === this.get('song.title');
   }),
   doubleClick() {
-    this.get('playing').setSong(this.get('song'));
+    let playing = this.get('playing');
+    playing.setPlaylist(this.get('playlist'));
+    playing.setSong(this.get('index'));
   }
 });
