@@ -1,6 +1,8 @@
 import Component from '@ember/component';
 import {inject as service} from '@ember/service';
 import {computed} from '@ember/object';
+import {htmlSafe} from '@ember/string';
+import $ from 'jquery';
 
 export default Component.extend({
   // session: Ember.inject.service('session'),
@@ -23,11 +25,11 @@ export default Component.extend({
       this.get('playing').pickTime(percentThrough);
     }
   },
-  width: computed('playing.progress', 'playing.song.duration', function () {
+  width: computed('playing.{progress,song.duration}', () => {
     let width = 0;
     let duration = this.get('playing.song.duration');
     if (duration > 0)
       width = this.get('playing.progress') / duration * 100;
-    return Ember.String.htmlSafe("width: " + width + "%");
+    return htmlSafe("width: " + width + "%");
   })
 });
