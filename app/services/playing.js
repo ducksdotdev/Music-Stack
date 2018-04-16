@@ -5,6 +5,7 @@ export default Service.extend({
   progress: 0,
   interval: null,
   paused: true,
+  audioObj: null,
   init() {
     this._super(...arguments);
     this.set('song', {
@@ -18,6 +19,7 @@ export default Service.extend({
     const isFirstSong = this.get('song.duration') === 0;
     this.set('song', song);
     this.set('progress', 0);
+    this.set('audioObj', new Audio(this.get('song.preview')));
     if (isFirstSong) this.pausePlay();
   },
   startProgress() {
@@ -26,7 +28,7 @@ export default Service.extend({
       __self.set('interval', setInterval(function () {
         let progress = __self.get('progress');
         if (progress >= __self.get('playing.song.duration')) __self.send('goNext');
-        else __self.set('progress', progress + .25);
+        else __self.set('progress', __self.get('audioObj').currentTime);
       }, 250));
     }
   },
@@ -38,18 +40,24 @@ export default Service.extend({
 
     if (isPaused) {
       clearInterval(this.get('interval'));
+      this.get('audioObj').pause();
       this.set('interval', null);
     } else {
+      this.get('audioObj').play();
       this.startProgress();
     }
   },
   goNext() {
+    // TODO
     this.set('progress', 0);
   },
   goPrevious() {
+    // TODO
     this.set('progress', 0);
   },
   pickTime(time) {
-    this.set('progress', this.get('song.duration') * time / 100);
+    let duration = this.get('song.duration');
+    this.get('audioObj').currentTime = duration * time / 100;
+    this.set('progress', duration * time / 100);
   }
 });
