@@ -1,11 +1,15 @@
 import Component from '@ember/component';
 import {inject as service} from '@ember/service';
+import {computed} from '@ember/object';
 
 export default Component.extend({
   playing: service(),
   classNames: 'friend',
   positionalParams: 'friend',
   song: [],
+  isActive: computed('playing.song.title', 'song.title', function () {
+    return this.get('playing.song.title') === this.get('song.title');
+  }),
   init() {
     const __self = this;
     __self._super(...arguments);
