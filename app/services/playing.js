@@ -6,7 +6,58 @@ export default Service.extend({
   interval: null,
   paused: true,
   audioObj: null,
-  playlist: null,
+  playlist: [
+    {
+      "artist": "Four Tet",
+      "album": "New Energy",
+      // "duration": 252,
+      "duration": 30,
+      "explicit": "FALSE",
+      "title": "Two Thousand and Seventeen",
+      "preview": "https://p.scdn.co/mp3-preview/b34e109295596ba611adce3f29ddbc485e2ba777?cid=774b29d4f13844c495f206cafdad9c86",
+      "service": "Spotify"
+    },
+    {
+      "artist": "Bonobo",
+      "album": "Late Night Tales: Bonobo",
+      // "duration": 303,
+      "duration": 30,
+      "explicit": "FALSE",
+      "title": "Places",
+      "preview": "https://p.scdn.co/mp3-preview/cbacc122ce2338fa001d0a740a3b29bca7b2b467?cid=774b29d4f13844c495f206cafdad9c86",
+      "service": "Spotify"
+    },
+    {
+      "artist": "Philanthrope",
+      "album": "Clockwork",
+      // "duration": 138,
+      "duration": 30,
+      "explicit": "FALSE",
+      "title": "Clockwork (feat. Tusken.)",
+      "preview": "https://p.scdn.co/mp3-preview/904fffa17e00e8aecaf88549ffefac6a4009bf34?cid=774b29d4f13844c495f206cafdad9c86",
+      "service": "Spotify"
+    },
+    {
+      "artist": "Lapalux",
+      "album": "Lustmore",
+      // "duration": 349,
+      "duration": 30,
+      "explicit": "FALSE",
+      "title": "Don't Mean a Thing",
+      "preview": "https://p.scdn.co/mp3-preview/99c2314972748492adbe4d7cd40560273216d068?cid=774b29d4f13844c495f206cafdad9c86",
+      "service": "Spotify"
+    },
+    {
+      "artist": "Teebs",
+      "album": "Ardour",
+      // "duration": 155,
+      "duration": 30,
+      "explicit": "FALSE",
+      "title": "Bern Rhythm",
+      "preview": "https://p.scdn.co/mp3-preview/52b57aa5af91e4692d4c7ac206e1ea400f7c2bee?cid=774b29d4f13844c495f206cafdad9c86",
+      "service": "Spotify"
+    }
+  ],
   init() {
     this._super(...arguments);
     this.set('song', {duration: 0});

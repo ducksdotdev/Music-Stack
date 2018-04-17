@@ -270,7 +270,9 @@ label { color: $white; }
     span { line-height: 1.2rem; display: block;
       &.name { font-weight: bold; }
       &.artist { font-size: .85rem; }
-      &.listeningTo { font-size: .9rem; }
+      &.listeningTo { font-size: .9rem;
+        &:hover { text-decoration: underline; cursor: pointer; }
+      }
     }
     .profile-picture {
       background: transparentize($white, .5);
