@@ -1,1 +1,10 @@
-{{outlet}}
+{{sidebar-navigation}}
+<wrapper>
+  <h1>Friends</h1>
+  <div class="friends-list">
+    {{#each model as |friend|}}
+      {{friend-card friend=friend}}
+    {{/each}}
+  </div>
+</wrapper>
+{{music-player}}
