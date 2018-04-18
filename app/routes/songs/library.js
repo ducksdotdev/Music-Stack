@@ -616,16 +616,6 @@ export default Route.extend({
       {
         "artist": "Gold Panda",
         "album": "Lucky Shiner",
-        // "duration": 183,
-        "duration": 30,
-        "explicit": "FALSE",
-        "title": "You",
-        "preview": "https://p.scdn.co/mp3-preview/e6e6a8bd742fe77c08c4e800d7b268dce1b62455?cid=774b29d4f13844c495f206cafdad9c86",
-        "service": "YouTube"
-      },
-      {
-        "artist": "Gold Panda",
-        "album": "Lucky Shiner",
         // "duration": 216,
         "duration": 30,
         "explicit": "FALSE",

@@ -1,4 +1,9 @@
-<td class={{if isActive 'active' ''}}>{{song.title}}</td>
+<td class={{if isActive 'active' ''}}>
+  {{#if isActive}}
+    <i class="fas fa-volume-up"></i>
+  {{/if}}
+  {{song.title}}
+</td>
 <td class={{if isActive 'active' ''}}>{{song.artist}}</td>
 <td class={{if isActive 'active' ''}}>{{song.album}}</td>
 <td class={{if isActive 'active' ''}}>{{seconds-to-readable song.duration}}</td>
