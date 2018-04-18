@@ -278,7 +278,9 @@ label { color: $white; }
     span { line-height: 1.2rem; display: block;
       &.name { font-weight: bold; }
       &.artist { font-size: .85rem; }
-      &.listeningTo { font-size: .9rem; }
+      &.listeningTo { font-size: .9rem;
+        &:hover { text-decoration: underline; cursor: pointer; }
+      }
     }
     .profile-picture {
       background: transparentize($white, .5);
@@ -295,6 +297,8 @@ label { color: $white; }
     }
   }
 }
+
+svg.svg-inline--fa.fa-volume-up { margin-right: 10px; }
 
 //Start Discver Page
 
