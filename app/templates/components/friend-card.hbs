@@ -1,2 +1,11 @@
 <div class="profile-picture"><i class="far fa-user"></i></div>
-<span class="name">{{friend}}</span>
+<span class="name">{{friend.name}}</span>
+{{#if friend.listeningTo}}
+  <span class="listeningTo" ondblclick={{action 'setSong'}}>
+    {{#if isActive}}
+      <i class="fas fa-volume-up"></i>
+    {{/if}}
+    {{song.title}}
+  </span>
+  <span class="artist">{{song.artist}}</span>
+{{/if}}
